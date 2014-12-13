@@ -1,9 +1,9 @@
 {
-    "name": "my-repo",
-    "version": "0.0.0",
-    "description": "My awesome Custom Element",
+    "name": "aha-partial",
+    "version": "0.0.1",
+    "description": "A Custom Element that can import other html as a partial",
     "license": "MIT",
-    "main": "src/my-element.html",
+    "main": "src/aha-partial.html",
     "keywords": [
         "web-components"
     ],

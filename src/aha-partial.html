@@ -1,0 +1,44 @@
+<script>
+    (function(window, document, undefined) {
+        // Creates an object based in the HTML Element prototype
+        var MyElementProto = Object.create(HTMLElement.prototype);
+        // Fires when an instance of the element is created
+        MyElementProto.createdCallback = function() {
+            if (!this.hasAttribute('src')) {
+                return;
+            }
+            this.setSrc(this.attributes.getNamedItem('src').value);
+        };
+        // Fires when an attribute was added, removed, or updated
+        MyElementProto.attributeChangedCallback = function(attr, oldVal, newVal) {
+            if (attr === 'src') {
+                this.setSrc(newVal);
+            }
+        };
+        // Sets new value to "src" attribute
+        MyElementProto.setSrc = function(val) {
+            //Empty this element first.
+            this.innerHTML = '';
+            this.offsetHeight = this.offsetHeight; // Forces DOM reflow
+            this.src = val;
+            var link = document.createElement('link');
+            link.rel = 'import';
+            link.href = this.src;
+            var self = this;
+            link.onload = function(e) {
+                var children = link.import.body.children;
+                for (var i = 0; i < children.length; i++) {
+                    self.appendChild(document.importNode(children[i], true));
+                };
+            };
+            link.onerror = function(e) {
+                console.error('Error loading partial: ' + e.target.href);
+            };
+            document.head.appendChild(link);
+        };
+        // Registers <aha-partial> in the main document
+        window.MyElement = document.registerElement('aha-partial', {
+            prototype: MyElementProto
+        });
+    })(window, document);
+</script>

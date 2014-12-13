@@ -1,4 +1,4 @@
-# &lt;my-repo&gt;
+# &lt;aha-partial&gt;
 
 > A bare minimum custom element starter-kit using [VanillaJS](http://vanilla-js.com/).
 >
@@ -8,17 +8,17 @@
 
 ## Demo
 
-[Check it live!](http://my-user.github.io/my-repo)
+[Check it live!](http://liuwenchao.github.io/aha-partial)
 
 ## Install
 
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install my-repo --save
+$ bower install aha-partial --save
 ```
 
-Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
+Or [download as ZIP](https://github.com/liuwenchao/aha-partial/archive/master.zip).
 
 ## Usage
 
@@ -31,32 +31,21 @@ Or [download as ZIP](https://github.com/my-user/my-repo/archive/master.zip).
 2. Import Custom Element:
 
     ```html
-    <link rel="import" href="bower_components/my-repo/src/my-element.html">
+    <link rel="import" href="bower_components/aha-partial/src/aha-partial.html">
     ```
 
 3. Start using it!
 
     ```html
-    <my-element></my-element>
+    <aha-partial src="somepage.html"></aha-partial>
     ```
 
 ## Options
 
 Attribute     | Options     | Default      | Description
 ---           | ---         | ---          | ---
-`foo`         | *string*    | `bar`        | Lorem ipsum dolor.
+`src`         | *string*    | ``           | the source of partial
 
-## Methods
-
-Method        | Parameters   | Returns     | Description
----           | ---          | ---         | ---
-`unicorn()`   | None.        | Nothing.    | Magic stuff appears.
-
-## Events
-
-Event         | Description
----           | ---
-`onsomething` | Triggers when something happens.
 
 ## Development
 
@@ -96,7 +85,7 @@ In order to run it locally you'll need to fetch some dependencies and a basic se
 
 ## History
 
-For detailed changelog, check [Releases](https://github.com/my-user/my-repo/releases).
+For detailed changelog, check [Releases](https://github.com/liuwenchao/aha-partial/releases).
 
 ## License
 
