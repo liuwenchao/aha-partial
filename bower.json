@@ -1,6 +1,6 @@
 {
     "name": "aha-partial",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A Custom Element that can import other html as a partial",
     "license": "MIT",
     "main": "src/aha-partial.html",
