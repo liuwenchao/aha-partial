@@ -13,19 +13,19 @@
 <body>
 
     <!-- Using Custom Elements -->
-    <aha-partial src="header.html"></aha-partial>
+    <aha-partial src="demo/header.html"></aha-partial>
 
     <div>
     Hello Body
     </div>
 
     <!-- Using Custom Elements -->
-    <aha-partial src="footer.html"></aha-partial>
+    <aha-partial src="demo/footer.html"></aha-partial>
 
     <button onclick="reset();">Click me to change header partial's src to footer dynamically</button>
     <script type="text/javascript">
     function reset() {
-      document.querySelector('aha-partial').setAttribute('src', 'footer.html');
+      document.querySelector('aha-partial').setAttribute('src', 'demo/footer.html');
     }
     </script>
     
