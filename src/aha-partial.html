@@ -1,7 +1,7 @@
 <script>
     (function(window, document, undefined) {
-        // Creates an object based in the HTML Element prototype
-        var MyElementProto = Object.create(HTMLElement.prototype);
+        // Creates an object based in the HTML Div Element prototype
+        var MyElementProto = Object.create(HTMLDivElement.prototype);
         // Fires when an instance of the element is created
         MyElementProto.createdCallback = function() {
             if (!this.hasAttribute('src')) {
